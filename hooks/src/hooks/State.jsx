@@ -1,7 +1,11 @@
 import React from 'react'
+import { useState } from 'react'
 
 export default function State() {
+
+  const [textColor, setTextColor ] = useState("red");
+
   return (
-    <div>State showed</div>
+    <p style={{color: `${textColor}`}} onClick={() => setTextColor("green")}>Text for Testing</p>
   )
 }
