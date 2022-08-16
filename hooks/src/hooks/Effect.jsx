@@ -7,10 +7,11 @@ export default function Effect() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    setTime(new Date());
-  })
+    const timer = setTimeout(() => setTime(new Date()), 1000);
+    return ()=> clearTimeout(timer);
+  }, [time])
 
   return (
-    <p>Seconds Now: {time.getSeconds()}</p>
+    <p>Seconds Now: {time.toLocaleDateString()}</p>
   )
 }
