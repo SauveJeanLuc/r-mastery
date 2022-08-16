@@ -4,6 +4,7 @@ import State from './hooks/State'
 import Effect from './hooks/Effect'
 import Context from './hooks/Context'
 import Ref from './hooks/Ref'
+import Reducer from './hooks/Reducer'
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
         <Context/>
         <hr />
         <Ref/>
+        <hr />
+        <Reducer/>
     </>
   )
 }
